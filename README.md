@@ -14,7 +14,7 @@ This repository contains the open source PHP SDK that allows you to access the F
 The Facebook PHP SDK can be installed with [Composer](https://getcomposer.org/). Run this command:
 
 ```sh
-composer require nickdnk/graph-sdk
+composer require Martyn911/graph-sdk
 ```
 
 By default, the request will be made via a `Facebook\HttpClients\FacebookHttpClientInterface`. The default
