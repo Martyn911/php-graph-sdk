@@ -1,5 +1,5 @@
 {
-    "name": "martyn911/graph-sdk",
+    "name": "martyn911/php-graph-sdk",
     "description": "Facebook SDK for PHP compatible with PHP8",
     "keywords": ["facebook", "sdk"],
     "type": "library",
