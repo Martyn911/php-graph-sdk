@@ -267,7 +267,8 @@ class FacebookRequest
         }
 
         // Clean the token & app secret proof from the endpoint.
-        $filterParams = ['access_token', 'appsecret_proof'];
+        //$filterParams = ['access_token', 'appsecret_proof'];
+        $filterParams = ['access_token'];
         $this->endpoint = FacebookUrlManipulator::removeParamsFromUrl($endpoint, $filterParams);
 
         return $this;
@@ -336,7 +337,8 @@ class FacebookRequest
         }
 
         // Don't let these buggers slip in.
-        unset($params['access_token'], $params['appsecret_proof']);
+        //unset($params['access_token'], $params['appsecret_proof']);
+        unset($params['access_token']);
 
         // @TODO Refactor code above with this
         //$params = $this->sanitizeAuthenticationParams($params);
@@ -470,7 +472,7 @@ class FacebookRequest
         $accessToken = $this->getAccessToken();
         if ($accessToken) {
             $params['access_token'] = $accessToken;
-            $params['appsecret_proof'] = $this->getAppSecretProof();
+            //$params['appsecret_proof'] = $this->getAppSecretProof();
         }
 
         return $params;
